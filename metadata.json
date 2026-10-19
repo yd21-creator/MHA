@@ -1,0 +1,6 @@
+{
+  "name": "과전류를 차단하라! (Stop the Overcurrent)",
+  "description": "옴의 법칙(V=IR)과 단락(합선) 현상 대처로 대정전 위기 속 도시 전력망을 지켜내는 과학 퍼즐 전략 시뮬레이션 게임",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

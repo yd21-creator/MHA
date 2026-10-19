@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-pixel {
+  font-family: 'Silkscreen', 'Press Start 2P', monospace;
+}
+
+.font-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Retro CRT scanline effect */
+.crt-scanlines::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+/* Retro screen subtle glow */
+.screen-glow {
+  box-shadow: inset 0 0 60px rgba(0, 200, 255, 0.05), 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Circuit current flow animation */
+@keyframes electricFlow {
+  0% { stroke-dashoffset: 24; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.animate-electric-flow {
+  stroke-dasharray: 6, 6;
+  animation: electricFlow 0.8s linear infinite;
+}
+
+.animate-electric-fast {
+  stroke-dasharray: 4, 4;
+  animation: electricFlow 0.3s linear infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
